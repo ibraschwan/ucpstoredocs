@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UCP Documentation
+
+Official documentation for the **Universal Commerce Protocol (UCP)** — an open standard enabling seamless interoperability between AI agents, platforms, and businesses for autonomous commerce.
+
+## What is UCP?
+
+UCP (Universal Commerce Protocol) is the "HTTP of commerce" — a standardized protocol that enables:
+
+- **AI Agents** to autonomously browse, select, and purchase products
+- **Platforms** to aggregate and expose commerce capabilities
+- **Businesses** to become AI-ready without custom integrations
+
+### Core Concepts
+
+| Layer | Description |
+|-------|-------------|
+| **Capabilities** | Core operations: Checkout, Identity Linking, Order |
+| **Extensions** | Optional features: Fulfillment, Discount, AP2 Mandates, Buyer Consent |
+| **Transports** | Communication protocols: REST, MCP, A2A, Embedded |
+
+## About This Documentation
+
+This is the official documentation site for UCP, built with:
+
+- **Next.js 14+** (App Router)
+- **Tailwind CSS**
+- **TypeScript**
+
+Live at: [docs.ucpstore.dev](https://docs.ucpstore.dev)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/AIPowered/ucpstoredocs.git
+cd ucpstoredocs
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the docs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NEXT_PUBLIC_WAITLIST_URL` | URL for waitlist CTA buttons | `https://ucpstore.dev/#waitlist` |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   └── docs/               # Documentation pages
+│       ├── protocol/       # Protocol overview & architecture
+│       ├── capabilities/   # Checkout, Identity, Order
+│       ├── extensions/     # Fulfillment, Discount, etc.
+│       ├── transports/     # REST, MCP, A2A, Embedded
+│       └── integration/    # Guides for businesses, platforms, AI agents
+├── components/
+│   ├── DocsLayout.tsx      # Main documentation layout
+│   ├── Header.tsx          # Top navigation
+│   └── Sidebar.tsx         # Side navigation
+└── app/
+    └── globals.css         # Global styles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For business inquiries and partnerships:
+**ben@ibracob.dev**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+[MIT](LICENSE)
+
+---
+
+Built with care by [ibracob.dev](https://ibracob.dev)
