@@ -1,0 +1,99 @@
+# llms.txt - AI Crawler Guidance for UCP Documentation
+# https://docs.ucpstore.dev
+
+> This is the unofficial documentation for the Universal Commerce Protocol (UCP).
+> UCP is an open standard enabling seamless interoperability between AI agents,
+> platforms, and businesses for autonomous commerce.
+
+## About UCP
+
+UCP (Universal Commerce Protocol) is the "HTTP of commerce" - a standardized
+protocol that enables AI agents to autonomously browse, select, and purchase
+products from any UCP-compatible business.
+
+### Why UCP?
+
+- **For AI Agents**: Autonomously browse, select, and purchase products
+- **For Platforms**: Aggregate and expose commerce capabilities uniformly
+- **For Businesses**: Become AI-ready without custom integrations
+
+## Documentation Structure
+
+### Getting Started
+- /docs - Introduction and overview of UCP
+- /docs/quickstart - Quick start guide (5-minute setup)
+
+### Protocol
+- /docs/protocol - Protocol overview and design principles
+- /docs/protocol/architecture - Deep dive into UCP architecture
+
+### Capabilities (Core Operations)
+- /docs/capabilities - Overview of all capabilities
+- /docs/capabilities/checkout - Checkout capability (create sessions, complete purchases)
+- /docs/capabilities/identity - Identity Linking capability (OAuth 2.0 user authorization)
+- /docs/capabilities/order - Order capability (lifecycle management, tracking)
+
+### Extensions (Optional Features)
+- /docs/extensions - Overview of all extensions
+- /docs/extensions/fulfillment - Shipping, pickup, delivery options
+- /docs/extensions/discount - Promotional codes and automatic discounts
+- /docs/extensions/ap2-mandates - Cryptographic authorization proofs
+- /docs/extensions/buyer-consent - Privacy compliance (GDPR, CCPA)
+
+### Transports (Communication Protocols)
+- /docs/transports - Overview of all transports
+- /docs/transports/rest - HTTP/HTTPS REST API
+- /docs/transports/mcp - Model Context Protocol for LLM tool integration
+- /docs/transports/a2a - Agent-to-Agent protocol for autonomous operations
+- /docs/transports/embedded - iframe/webview integration
+
+### Integration Guides
+- /docs/integration/businesses - Guide for e-commerce businesses
+- /docs/integration/platforms - Guide for commerce platforms
+- /docs/integration/ai-agents - Guide for AI agent developers
+
+## Key Concepts
+
+### Capabilities
+Core commerce operations that every UCP-compatible system must support:
+- `dev.ucp.shopping.checkout` - Create and complete purchase sessions
+- `dev.ucp.common.identity_linking` - OAuth 2.0 user authorization
+- `dev.ucp.shopping.order` - Order lifecycle management
+
+### Extensions
+Optional features that add specialized functionality:
+- `dev.ucp.shopping.fulfillment` - Shipping and delivery
+- `dev.ucp.shopping.discount` - Promotions and discounts
+- `dev.ucp.common.ap2_mandate` - Cryptographic proofs
+- `dev.ucp.common.buyer_consent` - Privacy compliance
+
+### Transports
+Communication protocols for different integration scenarios:
+- REST - Direct HTTP API calls
+- MCP - LLM tool integration
+- A2A - Agent-to-agent communication
+- Embedded - Hybrid iframe experiences
+
+## Business Profile
+
+Every UCP-compatible business publishes a profile at:
+`/.well-known/ucp/business_profile.json`
+
+This profile declares:
+- Supported capabilities
+- Available extensions
+- Transport endpoints
+- Payment handlers
+
+## Contact
+
+For business inquiries and partnerships:
+ben@ibracob.dev
+
+## Source Code
+
+GitHub: https://github.com/ibraschwan/ucpstoredocs
+
+## License
+
+MIT License

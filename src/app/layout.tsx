@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { JsonLd, organizationSchema, webSiteSchema } from "@/components/JsonLd";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,6 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://docs.ucpstore.dev'),
   title: {
     default: "UCP Documentation | Universal Commerce Protocol",
     template: "%s | UCP Documentation",
@@ -59,14 +62,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={webSiteSchema} />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen`}
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {children}
-        {/* Vercel Analytics */}
-        <script defer src="/_vercel/insights/script.js"></script>
+        <Analytics />
       </body>
     </html>
   );

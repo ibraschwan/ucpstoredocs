@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Star } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -33,6 +33,14 @@ export default function Header() {
             UCPStore <ArrowUpRight size={12} />
           </a>
           <a
+            href="https://github.com/ibraschwan/ucpstoredocs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-black transition-colors"
+          >
+            <Star size={12} /> Star on GitHub
+          </a>
+          <a
             href={process.env.NEXT_PUBLIC_WAITLIST_URL || 'https://ucpstore.dev/#waitlist'}
             target="_blank"
             rel="noopener noreferrer"
@@ -45,6 +53,7 @@ export default function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
