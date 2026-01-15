@@ -9,16 +9,17 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b border-zinc-200 z-40 md:pl-[280px]">
-      <div className="h-full px-6 flex items-center justify-between">
+      <div className="h-full px-6 md:px-4 flex items-center justify-between">
         {/* Mobile Logo */}
         <Link href="/docs" className="md:hidden flex items-center gap-3">
           <img src="/ucpstore.svg" alt="UCPStore" className="h-4 w-auto" />
           <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Docs</span>
         </Link>
 
-        {/* Search Placeholder */}
-        <div className="hidden md:flex items-center gap-2 text-zinc-400 text-xs uppercase tracking-widest">
-          <span>Universal Commerce Protocol Documentation</span>
+        {/* Desktop Logo & Title */}
+        <div className="hidden md:flex items-center gap-4">
+          <img src="/ucpstore.svg" alt="UCPStore" className="h-6 w-auto" />
+          <span className="text-zinc-400 text-xs uppercase tracking-widest">Universal Commerce Protocol Documentation</span>
         </div>
 
         {/* Right Actions */}

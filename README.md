@@ -1,6 +1,6 @@
 # UCP Documentation
 
-Official documentation for the **Universal Commerce Protocol (UCP)** — an open standard enabling seamless interoperability between AI agents, platforms, and businesses for autonomous commerce.
+An UNOfficial documentation for the **Universal Commerce Protocol (UCP)** — an open standard enabling seamless interoperability between AI agents, platforms, and businesses for autonomous commerce.
 
 ## What is UCP?
 
@@ -15,7 +15,7 @@ UCP (Universal Commerce Protocol) is the "HTTP of commerce" — a standardized p
 | Layer | Description |
 |-------|-------------|
 | **Capabilities** | Core operations: Checkout, Identity Linking, Order |
-| **Extensions** | Optional features: Fulfillment, Discount, AP2 Mandates, Buyer Consent |
+| **Extensions** | Optional features    : Fulfillment, Discount, AP2 Mandates, Buyer Consent |
 | **Transports** | Communication protocols: REST, MCP, A2A, Embedded |
 
 ## About This Documentation
